@@ -1,6 +1,6 @@
 # Jekyll doc
 
-Have you ever been frustrated because you wanted a real doc of Jekyll and coudln't find the attributes of a class?
+Have you ever been frustrated because you wanted a real doc of Jekyll and couldn't find the attributes of a class?
 
 Here is a complete unofficial documentation of jekyll
 
