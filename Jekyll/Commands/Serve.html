@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>class Jekyll::Commands::Serve - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../../";
+  var index_rel_prefix = "../../";
+</script>
+
+<script src="../../js/navigation.js" defer></script>
+<script src="../../js/search.js" defer></script>
+<script src="../../js/search_index.js" defer></script>
+<script src="../../js/searcher.js" defer></script>
+<script src="../../js/darkfish.js" defer></script>
+
+<link href="../../css/fonts.css" rel="stylesheet">
+<link href="../../css/rdoc.css" rel="stylesheet">
+
+
+<body id="top" role="document" class="class">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../../table_of_contents.html#pages">Pages</a>
+    <a href="../../table_of_contents.html#classes">Classes</a>
+    <a href="../../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="class-metadata">
+    
+    
+<div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  <p class="link"><a href="../Command.html">Jekyll::Command</a>
+</div>
+
+    
+    
+    
+<!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    <li ><a href="#method-c-init_with_program">::init_with_program</a>
+    <li ><a href="#method-c-process">::process</a>
+    <li ><a href="#method-c-shutdown">::shutdown</a>
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="class-Jekyll::Commands::Serve">
+  <h1 id="class-Jekyll::Commands::Serve" class="class">
+    class Jekyll::Commands::Serve
+  </h1>
+
+  <section class="description">
+    
+  </section>
+
+  <section id="5Buntitled-5D" class="documentation-section">
+
+
+    <section class="constants-list">
+      <header>
+        <h3>Constants</h3>
+      </header>
+      <dl>
+        <dt id="COMMAND_OPTIONS">COMMAND_OPTIONS
+        <dd>
+        <dt id="DIRECTORY_INDEX">DIRECTORY_INDEX
+        <dd>
+        <dt id="LIVERELOAD_DIR">LIVERELOAD_DIR
+        <dd>
+        <dt id="LIVERELOAD_PORT">LIVERELOAD_PORT
+        <dd>
+      </dl>
+    </section>
+
+    <section class="attribute-method-details" class="method-section">
+      <header>
+        <h3>Attributes</h3>
+      </header>
+
+      <div id="attribute-c-mutex" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">mutex</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        
+        </div>
+      </div>
+      <div id="attribute-c-run_cond" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">run_cond</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        
+        </div>
+      </div>
+      <div id="attribute-c-running" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">running</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        
+        </div>
+      </div>
+      <div id="attribute-c-running-3F" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">running?</span><span
+            class="attribute-access-type">[R]</span>
+        </div>
+
+        <div class="method-description">
+        
+        </div>
+      </div>
+    </section>
+
+
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Class Methods</h3>
+       </header>
+
+      <div id="method-c-init_with_program" class="method-detail ">
+        <div class="method-heading">
+          <span class="method-name">init_with_program</span><span
+            class="method-args">(prog)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="init_with_program-source">
+            <pre><span class="ruby-comment"># File jekyll/commands/serve.rb, line 61</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">init_with_program</span>(<span class="ruby-identifier">prog</span>)
+  <span class="ruby-identifier">prog</span>.<span class="ruby-identifier">command</span>(<span class="ruby-value">:serve</span>) <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">cmd</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">cmd</span>.<span class="ruby-identifier">description</span> <span class="ruby-string">&quot;Serve your site locally&quot;</span>
+    <span class="ruby-identifier">cmd</span>.<span class="ruby-identifier">syntax</span> <span class="ruby-string">&quot;serve [options]&quot;</span>
+    <span class="ruby-identifier">cmd</span>.<span class="ruby-identifier">alias</span> <span class="ruby-value">:server</span>
+    <span class="ruby-identifier">cmd</span>.<span class="ruby-identifier">alias</span> <span class="ruby-value">:s</span>
+
+    <span class="ruby-identifier">add_build_options</span>(<span class="ruby-identifier">cmd</span>)
+    <span class="ruby-constant">COMMAND_OPTIONS</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">key</span>, <span class="ruby-identifier">val</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">cmd</span>.<span class="ruby-identifier">option</span> <span class="ruby-identifier">key</span>, <span class="ruby-operator">*</span><span class="ruby-identifier">val</span>
+    <span class="ruby-keyword">end</span>
+
+    <span class="ruby-identifier">cmd</span>.<span class="ruby-identifier">action</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">_</span>, <span class="ruby-identifier">opts</span><span class="ruby-operator">|</span>
+      <span class="ruby-identifier">opts</span>[<span class="ruby-string">&quot;livereload_port&quot;</span>] <span class="ruby-operator">||=</span> <span class="ruby-constant">LIVERELOAD_PORT</span>
+      <span class="ruby-identifier">opts</span>[<span class="ruby-string">&quot;serving&quot;</span>] = <span class="ruby-keyword">true</span>
+      <span class="ruby-identifier">opts</span>[<span class="ruby-string">&quot;watch&quot;</span>]   = <span class="ruby-keyword">true</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">opts</span>.<span class="ruby-identifier">key?</span>(<span class="ruby-string">&quot;watch&quot;</span>)
+
+      <span class="ruby-comment"># Set the reactor to nil so any old reactor will be GCed.</span>
+      <span class="ruby-comment"># We can&#39;t unregister a hook so while running tests we don&#39;t want to</span>
+      <span class="ruby-comment"># inadvertently keep using a reactor created by a previous test.</span>
+      <span class="ruby-ivar">@reload_reactor</span> = <span class="ruby-keyword">nil</span>
+
+      <span class="ruby-identifier">config</span> = <span class="ruby-identifier">configuration_from_options</span>(<span class="ruby-identifier">opts</span>)
+      <span class="ruby-identifier">config</span>[<span class="ruby-string">&quot;url&quot;</span>] = <span class="ruby-identifier">default_url</span>(<span class="ruby-identifier">config</span>) <span class="ruby-keyword">if</span> <span class="ruby-constant">Jekyll</span>.<span class="ruby-identifier">env</span> <span class="ruby-operator">==</span> <span class="ruby-string">&quot;development&quot;</span>
+
+      <span class="ruby-identifier">process_with_graceful_fail</span>(<span class="ruby-identifier">cmd</span>, <span class="ruby-identifier">config</span>, <span class="ruby-constant">Build</span>, <span class="ruby-constant">Serve</span>)
+    <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-c-process" class="method-detail ">
+        <div class="method-heading">
+          <span class="method-name">process</span><span
+            class="method-args">(opts)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="process-source">
+            <pre><span class="ruby-comment"># File jekyll/commands/serve.rb, line 93</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">process</span>(<span class="ruby-identifier">opts</span>)
+  <span class="ruby-identifier">opts</span> = <span class="ruby-identifier">configuration_from_options</span>(<span class="ruby-identifier">opts</span>)
+  <span class="ruby-identifier">destination</span> = <span class="ruby-identifier">opts</span>[<span class="ruby-string">&quot;destination&quot;</span>]
+  <span class="ruby-keyword">if</span> <span class="ruby-identifier">opts</span>[<span class="ruby-string">&quot;livereload&quot;</span>]
+    <span class="ruby-identifier">validate_options</span>(<span class="ruby-identifier">opts</span>)
+    <span class="ruby-identifier">register_reload_hooks</span>(<span class="ruby-identifier">opts</span>)
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-identifier">setup</span>(<span class="ruby-identifier">destination</span>)
+
+  <span class="ruby-identifier">start_up_webrick</span>(<span class="ruby-identifier">opts</span>, <span class="ruby-identifier">destination</span>)
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-c-shutdown" class="method-detail ">
+        <div class="method-heading">
+          <span class="method-name">shutdown</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="shutdown-source">
+            <pre><span class="ruby-comment"># File jekyll/commands/serve.rb, line 105</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">shutdown</span>
+  <span class="ruby-ivar">@server</span>.<span class="ruby-identifier">shutdown</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">running?</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+    </section>
+
+  </section>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="https://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="https://ruby.github.io/rdoc/">RDoc</a> 6.3.1.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+
